@@ -1,23 +1,19 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        int n= nums.size();
-        int k;
+        int n=nums.size();
+        vector<int> arr(n+1,0);
+        for(int i=0;i<n;i++)
+        {
+            arr[nums[i]]+=1;
+        }
         for(int i=0;i<=n;i++)
         {
-            int count = 0;
-            for(int j=0;j<n;j++)
+            if(arr[i]<1)
             {
-                if(nums[j]==i)
-                {
-                    count++;
-                }
-            }
-            if(count==0)
-            {
-                k= i;
+                return i;
             }
         }
-        return k;
+        return 0;
     }
 };
