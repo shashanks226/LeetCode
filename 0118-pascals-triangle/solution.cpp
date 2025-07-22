@@ -2,7 +2,6 @@ class Solution {
 public:
     vector<vector<int>> generate(int numRows) {
         vector<vector<int>> tri(numRows);
-        // tri[0][0]=1;
         for(int i=0;i<numRows;i++)
         {
             tri[i].resize(i+1);
