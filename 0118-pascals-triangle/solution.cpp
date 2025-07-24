@@ -5,7 +5,7 @@ public:
         for(int i=0;i<numRows;i++)
         {
             tri[i].resize(i+1);
-            for(int j=0;j<=i;j++)
+            for(int j=0;j<i+1;j++)
             {
                 if(j==0 || j==i)
                 {
@@ -13,7 +13,7 @@ public:
                 }
                 else
                 {
-                    tri[i][j]=tri[i-1][j-1]+tri[i-1][j];
+                    tri[i][j]= tri[i-1][j-1]+tri[i-1][j];
                 }
             }
         }
